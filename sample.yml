@@ -1,6 +1,6 @@
 - name: Demo playbook
- hosts: all
- roles: 
+  hosts: all
+  roles: 
     - name: print Hello World
       ansible.builtin.debug:
       masg: Hello World 
