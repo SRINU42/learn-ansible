@@ -1,0 +1,10 @@
+- name: hello world
+  hosts: all
+  tasks: 
+    - name: print Hello World
+      ansible.builtin.debug:
+         msg: Hwllo World
+
+    - name: Incllude Hello Universal
+      ansible.bulitin.include_tasks:
+      file: universal.yml
