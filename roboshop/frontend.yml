@@ -5,7 +5,7 @@
    - name: Installing Nginx Server
      ansible.builtin.yum:
        name: nginx
-       state: installed
+       state: latest
 
    -name: Remove the directory
     ansible.builtin.file:
@@ -21,7 +21,7 @@
      ansible.builtin.unarchive:
        url: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
        dest: /tmp/frontend.zip
-       remote: yes
+       remote_src: yes
 
    - naem:  Update Frontend Configuration
      ansible.builtin.copy:
